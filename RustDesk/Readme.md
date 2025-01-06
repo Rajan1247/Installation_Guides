@@ -53,30 +53,34 @@ Or check the [Github Release Page](https://github.com/rustdesk/rustdesk/releases
 2. (Only if not downlaoded earlier with [Github Release Page](https://github.com/rustdesk/rustdesk/releases)) To download the `.deb` (Version 1.3.2) file with `Terminal` run the following command:
 
     - Linux-x86_64
-    ```bash
-    wget https://github.com/rustdesk/rustdesk/releases/download/1.3.2/rustdesk-1.3.2-x86_64.deb
-    ```
+
+        ```bash
+        wget https://github.com/rustdesk/rustdesk/releases/download/1.3.2/rustdesk-1.3.2-x86_64.deb
+        ```
     - ARM Devices(aarch64)
-    ```bash
-    wget https://github.com/rustdesk/rustdesk/releases/download/1.3.2/rustdesk-1.3.2-aarch64.deb
-    ```
+
+        ```bash
+        wget https://github.com/rustdesk/rustdesk/releases/download/1.3.2/rustdesk-1.3.2-aarch64.deb
+        ```
 
 3. To install the downloaded `.deb` package of rustdesk run the following command:
     - Linux-x86_64
-    ```bash
-    sudo apt install ./rustdesk-1.3.2-x86_64.deb 
-    ```
+    
+        ```bash
+        sudo apt install ./rustdesk-1.3.2-x86_64.deb 
+        ```
     - ARM Devices (aarch64)
-    ```bash
-    sudo apt install ./rustdesk-1.3.2-aarch64.deb
-    ```
+    
+        ```bash
+        sudo apt install ./rustdesk-1.3.2-aarch64.deb
+        ```
 
 ### Windows
 1. Double Click on the downloaded `.exe` file to open the Rustdesk
     - You can use the RustDesk like this but you have to run the `.exe` file everytime you want to open the RustDesk.
     - To add the RustDesk in your system click the Install button shown in below figure.
 
-    ![Windows Install](images/rustdeskclient.png)
+        ![Windows Install](images/rustdeskclient.png)
 
 ## TroubleShooting
 ### Installation Error (Linux)
@@ -110,45 +114,82 @@ To solve this error we can follow either of the following steps:
     ```bash
     sudo apt --fix-broken install
     ```
-    Linux-x86_64
-    ```bash
-    sudo apt install ./rustdesk-1.3.2-x86_64.deb
-    ```
-    ARM Devices(aarch64)
-    ```bash
-    sudo apt install ./rustdesk-1.3.2-aarch64.deb
-    ```
+    - Linux-x86_64
+
+        ```bash
+        sudo apt install ./rustdesk-1.3.2-x86_64.deb
+        ```
+    - ARM Devices(aarch64)
+
+        ```bash
+        sudo apt install ./rustdesk-1.3.2-aarch64.deb
+        ```
 
 2. Installing the dependencies manually and then install the RustDesk with `dpkg`. The `dpkg` command will list the dependencies which are missing and we can download it using the following command:
     ```bash
     sudo apt install <package_name>
     ```
-    Linux-x86_64
-    ```bash
-    sudo dpkg -i rustdesk-1.3.2-x86_64.deb
-    ```
-    ARM Devices(aarch64)
-    ```bash
-    sudo dpkg -i rustdesk-1.3.2-aarch64.deb
-    ```
+    - Linux-x86_64
+
+        ```bash
+        sudo dpkg -i rustdesk-1.3.2-x86_64.deb
+        ```
+    - ARM Devices(aarch64)
+
+        ```bash
+        sudo dpkg -i rustdesk-1.3.2-aarch64.deb
+        ```
 
 ### Login Screen Access (Linux)
 
-Rustdesk will use the WayLand by default in the Linux System. And the Login screen using Wayland is not supported yet. If you want to access login screen after reboot or logout with RustDesk, you need to change login screen to X11.
+- Rustdesk will use the WayLand by default in the Linux System. And the Login screen using Wayland is not supported yet. If you want to access login screen after reboot or logout with RustDesk, you need to change login screen to X11.
 
-To change the login screen to X11 open `custom.conf` with sudo access and uncomment `#WaylandEnable=false` by removing the `#`.
+- To change the login screen to `X11` open `custom.conf` with sudo access and uncomment `#WaylandEnable=false` by removing the `#`.
 
-After uncommenting the `#WaylandEnable=false` press `Ctrl+X` then type `Y` and press `Enter` to save the changes.
+- After uncommenting the `#WaylandEnable=false` press `Ctrl+X` then type `Y` and press `Enter` to save the changes.
 
-```bash
-sudo nano /etc/gdm3/custom.conf
-```
-or
-```bash
-sudo nano /etc/gdm/custom.conf
-```
+    ```bash
+    sudo nano /etc/gdm3/custom.conf
+    ```
+    or
+    ```bash
+    sudo nano /etc/gdm/custom.conf
+    ```
 ![Final file](images/image.png)
 
+- To check whether you are running `wayland` or `X11` you can use the following command:
+
+    ```bash
+    echo $XDG_SESSION_TYPE
+    ```
+
+### Login Screen Access (Raspberry Pi)
+
+- Rustdesk will use the WayLand by default in the Linux System. And the Login screen using Wayland is not supported yet. If you want to access login screen after reboot or logout with RustDesk, you need to change login screen to X11.
+
+- To change the login screen to `X11` follow these steps:
+
+- Launch the Rasp-config command line tool using the following command in the terminal:
+
+    ```bash
+    sudo raspi-config
+    ```
+
+- With the Raspi-config tool now open on Raspberry Pi, the first thing you will want to do is navigate to the `Advanced Options` page. You can navigate through this tool by using the `ARROW` keys. To select a highlighted option, press the `ENTER` key.
+
+- Within this menu, you will find an option labeled “Wayland“. Once you have the option selected, press the ENTER key. This will take us to the menu that will allow us to switch between the `X11` and Wayland backends on our Raspberry Pi.
+
+- On this page you will see a few options. Two of these will enable Wayland, the other one will enable the `X11` backend on Raspberry Pi. If you want to switch from Wayland to `X11` on Raspberry Pi, select the option named `X11` (1.), and press `ENTER`. Alternatively, to swap from `X11` to Wayland, you will want to select the “Labwc” option (2.). Ignore the one labeled “wayfire“, as that is no longer supported by the Raspberry Pi OS dev team.
+
+- After switching to `X11` on  Raspberry Pi, you will get a message indicating it is now `active`. However, it won’t be active until you restart Raspberry Pi. Press `ENTER` to continue back to the main menu of the Raspi-config tool. Back on this main menu, select the `<FINISH>` option to exit the tool. You can also press the `ESC` key to exit.
+
+- You will now be asked if you want to restart. For the switch from Wayland to `X11` to complete on your Raspberry Pi, you will need to select the `<Yes>` option and press ENTER.
+
+- To check whether you are running `wayland` or `X11` you can use the following command:
+
+    ```bash
+    echo $XDG_SESSION_TYPE
+    ```
 
 ## Configuration
 

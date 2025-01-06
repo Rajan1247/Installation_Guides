@@ -30,40 +30,47 @@ Or check the [No Machine Download Page](https://downloads.nomachine.com/) to dow
 
 1. (Only if not downlaoded earlier with [No Machine Download Page](https://downloads.nomachine.com/)) To download the `.deb` (Version 8.14.2_1) file with `Terminal` run the following command:
     - Linux-x86_64 (Ubuntu 22.04)
-    ```bash
-    wget https://download.nomachine.com/download/8.14/Linux/nomachine_8.14.2_1_amd64.deb
-    ```
+
+      ```bash
+      wget https://download.nomachine.com/download/8.14/Linux/nomachine_8.14.2_1_amd64.deb
+      ```
     - ARM Devices(ARM64)
-    ```bash
-    wget https://download.nomachine.com/download/8.14/Arm/nomachine_8.14.2_1_arm64.deb
-    ```
+
+      ```bash
+      wget https://download.nomachine.com/download/8.14/Arm/nomachine_8.14.2_1_arm64.deb
+      ```
     - Raspberry Pi 4 and 5 (ARMv7)
-    ```bash
-    wget https://download.nomachine.com/download/8.14/Raspberry/nomachine_8.14.2_1_armhf.deb
-    ```
+
+      ```bash
+      wget https://download.nomachine.com/download/8.14/Raspberry/nomachine_8.14.2_1_armhf.deb
+      ```
     - Raspberry Pi 4 and 5 (ARMv8)
-    ```bash
-    wget https://download.nomachine.com/download/8.14/Raspberry/nomachine_8.14.2_1_arm64.deb
-    ```
+
+      ```bash
+      wget https://download.nomachine.com/download/8.14/Raspberry/nomachine_8.14.2_1_arm64.deb
+      ```
 2. After downloading the `.deb` file, open the terminal in the directory where the downloaded file is located. Run the following command to install the NoMachine.
     ```bash
     sudo dpkg -i nomachine_<version_architecture>.deb 
     ```
 
-    Linux-x86_64 (Ubuntu 22.04)
-    ```bash
-    sudo dpkg -i nomachine_8.14.2_1_amd64.deb 
-    ```
+    - Linux-x86_64 (Ubuntu 22.04)
 
-    ARM Devices (ARM64) and Raspberry Pi 4 and 5 (ARMv8)
-    ```bash
-    sudo dpkg -i nomachine_8.14.2_1_arm64.deb 
-    ```
+      ```bash
+      sudo dpkg -i nomachine_8.14.2_1_amd64.deb 
+      ```
 
-    Raspberry Pi 4 and 5 (ARMv7)
-    ```bash
-    sudo dpkg -i nomachine_8.14.2_1_armhf.deb 
-    ```
+    - ARM Devices (ARM64) and Raspberry Pi 4 and 5 (ARMv8)
+
+      ```bash
+      sudo dpkg -i nomachine_8.14.2_1_arm64.deb 
+      ```
+
+    - Raspberry Pi 4 and 5 (ARMv7)
+    
+      ```bash
+      sudo dpkg -i nomachine_8.14.2_1_armhf.deb 
+      ```
 
 ### Windows
 After downloading the installer, install it by double-clicking on the icon of the executable file.
