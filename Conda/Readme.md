@@ -24,19 +24,11 @@ Anaconda Distribution is a Python/R Data Science distribution that contains:
 - Access to the Anaconda Public Repository, with 8000 open-source data science and machine learning packages.
 
 You can use the `install-anaconda.sh` script to download and install the latest version of Anaconda. 
-- Run the following command to download the `install-anaconda.sh` file:
+- Run the following command to download the `install-anaconda.sh` file, then make it executable and execute to install the Anaconda:
     
     ```bash
     wget https://raw.githubusercontent.com/Rajan1247/Installation_Guides/main/Conda/install-anaconda.sh -O install-anaconda.sh
-    ```
-- Make the script executable with the following command:
-
-    ```bash
     chmod +x install-anaconda.sh
-    ```
-- Run the script using the following command:
-
-    ```bash
     ./install-anaconda.sh
     ```
 - And wait till the instalation is completed. (You might be prompted for the user password.)
@@ -150,19 +142,11 @@ Alternatively, You can follow the below steps to install the Anaconda manually i
 Miniconda is a free, miniature installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.
 
 You can use the `install-miniconda.sh` script to download and install the latest version of Miniconda. 
-- Run the following command to download the `install-miniconda.sh` file:
+- Run the following command to download the `install-miniconda.sh` file, then make it executable and execute to install the Miniconda:
     
     ```bash
     wget https://raw.githubusercontent.com/Rajan1247/Installation_Guides/main/Conda/install-miniconda.sh -O install-miniconda.sh
-    ```
-- Make the script executable with the following command:
-
-    ```bash
     chmod +x install-miniconda.sh
-    ```
-- Run the script using the following command:
-
-    ```bash
     ./install-miniconda.sh
     ```
 - And wait till the instalation is completed. (You might be prompted for the user password.)
