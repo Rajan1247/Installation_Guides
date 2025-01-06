@@ -23,6 +23,25 @@ Anaconda Distribution is a Python/R Data Science distribution that contains:
 - **Over 300 automatically** -installed packages that work well together out of the box.
 - Access to the Anaconda Public Repository, with 8000 open-source data science and machine learning packages.
 
+You can use the `install-anaconda.sh` script to download and install the latest version of Anaconda. 
+- Run the following command to download the `install-anaconda.sh` file:
+    
+    ```bash
+    wget https://raw.githubusercontent.com/Rajan1247/Installation_Guides/main/Conda/install-anaconda.sh -O install-anaconda.sh
+    ```
+- Make the script executable with the following command:
+
+    ```bash
+    chmod +x install-anaconda.sh
+    ```
+- Run the script using the following command:
+
+    ```bash
+    ./install-anaconda.sh
+    ```
+- And wait till the instalation is completed. (You might be prompted for the user password.)
+
+Alternatively, You can follow the below steps to install the Anaconda manually in your system.
 
 #### 1. Download the Script
 
@@ -130,7 +149,7 @@ Anaconda Distribution is a Python/R Data Science distribution that contains:
 
 Miniconda is a free, miniature installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.
 
-You can use the `miniconda-install.sh` script to download and install the Miniconda. 
+You can use the `install-miniconda.sh` script to download and install the latest version of Miniconda. 
 - Run the following command to download the `install-miniconda.sh` file:
     
     ```bash
