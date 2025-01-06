@@ -255,3 +255,46 @@ Alternatively, You can follow the below steps to install the Miniconda manually 
     ```bash
     conda activate
     ```
+
+
+## Conda Environments
+
+Conda allows you to create separate environments, each containing their own files, packages, and package dependencies. The contents of each environment do not interact with each other.
+
+- The most basic way to create a new environment is with the following command:
+
+    ```bash
+    conda create -n <env-name>
+    ```
+
+- To add packages while creating an environment, specify them after the environment name:
+
+    ```bash
+    conda create -n <env-name> python numpy pandas
+    ```
+
+- To create the conda environment with the specific python version you can run the following command:
+
+    ```bash
+    # conda create -n <env-name> python=<version>
+    conda create -n <env-name> python=3.9
+    ```
+
+- To activate any created conda environments you can run the following command:
+
+    ```bash
+    conda actiavte
+    ```
+
+- To list all the available environments you can run the following command:
+
+    ```bash
+    conda info --envs
+    ```
+
+- To install any packages with conda, first actiavte the environment in which you want to install that package abd run the following command:
+
+    ```bash
+    # conda install <package_name>
+    conda install numpy
+  
