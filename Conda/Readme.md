@@ -131,7 +131,7 @@ Anaconda Distribution is a Python/R Data Science distribution that contains:
 Miniconda is a free, miniature installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.
 
 You can use the `miniconda-install.sh` script to download and install the Miniconda. 
-- [Click here](https://raw.githubusercontent.com/Rajan1247/Installation_Guides/refs/heads/main/Conda/install-miniconda.sh) to download the script.
+- [Click here](https://raw.githubusercontent.com/Rajan1247/Installation_Guides/main/Conda/install-miniconda.sh) to download the script.
 - Make the script executable with the following command:
 
     ```bash
