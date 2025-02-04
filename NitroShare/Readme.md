@@ -75,6 +75,7 @@ Also, it automatically detects every other device on a network that has Nitrosha
     nitroshare
     ```
 
+
 - It states that the package named `libqmdnsengine0` is missing. So, you have to install the package manually using `apt` with the following command:
 
     ```bash
